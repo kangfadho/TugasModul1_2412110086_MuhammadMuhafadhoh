@@ -1,0 +1,204 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 0 10px;
+  }
+}
+/* Navbar   */
+.navbar-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.navbar-box .menu ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar-box .menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 18px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navbar-box .menu ul li a:hover {
+  color: black;
+  text-shadow: 0 0 5px black;
+}
+.navbar-box .menu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.navbar-box .menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* toggle Menu */
+/* Hide checkbox */
+#toggle-menu {
+  display: none;
+}
+
+/* Default: menu tampil untuk desktop */
+.menu ul {
+  display: flex;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  /* Show when checkbox checked */
+  #toggle-menu:checked ~ .menu ul {
+    display: flex;
+  }
+
+  .toggle {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* hero */
+.hero {
+  padding: 60px 0;
+  background: #e5e5e5;
+}
+
+.hero-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.hero-text h3 {
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.hero-text .small {
+  margin: 10px 0 20px;
+  font-size: 15px;
+  color: #555;
+}
+
+.hero-btn {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-fill {
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-img img {
+  width: 320px;
+  height: auto;
+}
+
+/* Biar ada kelap-kelipnya */
+.btn-fill {
+  background: black;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.btn-fill:hover {
+  background: black;
+  transform: scale(1.1);
+}
+
+/* Outline */
+.btn-outline {
+  border: 2px solid black;
+  color: black;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  background: black;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* tambahan entah dari siapa */
+@media (max-width: 768px) {
+  .hero-box {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
